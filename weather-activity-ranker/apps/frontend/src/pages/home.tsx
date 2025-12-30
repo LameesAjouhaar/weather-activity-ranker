@@ -6,18 +6,6 @@ export default function Home() {
   const [city, setCity] = useState("");
   const [fetchRankings, { data, loading, error }] = useLazyQuery(RANK_CITY);
 
-  const getRecommendationColor = (recommendation: string) => {
-    switch (recommendation) {
-      case "Highly recommended":
-        return "#4caf50"; 
-      case "Moderately recommended":
-        return "#ff9800"; 
-      case "Not recommended":
-        return "#f44336"; 
-      default:
-        return "#000"; 
-    }
-  };
 
   return (
     <div style={{ padding: 24, fontFamily: "Arial, sans-serif" }}>
