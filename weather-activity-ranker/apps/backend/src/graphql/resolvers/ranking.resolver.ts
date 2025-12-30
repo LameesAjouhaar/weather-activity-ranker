@@ -9,6 +9,11 @@ export const rankCity = async (
 
   return forecast.map(day => ({
     date: day.date,
+    weather: {
+      temperature: day.temperature,
+      precipitation: day.precipitation,
+      windSpeed: day.windSpeed,
+    },
     scores: scoreDay(day),
   }));
 };
